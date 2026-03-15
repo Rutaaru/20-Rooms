@@ -52,6 +52,3 @@ This program was made using Python, with PyCharm.
 - [Code Walkthrough](https://www.youtube.com/watch?v=...)
 
 ---
-
-##### This game was inspired loosely by the video game "Pressure" by 'Zeal' + 'Urbanshade: Hadal Division' dev team, on Roblox.
-##### Also thought of: "Buckshot Roulette" by Mike Klubnika, on itch.io; + 'Critical Reflex' publishing, on Steam.
