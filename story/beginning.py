@@ -4,7 +4,7 @@ Inputs:
     None
 
 Outputs:
-    inventory (list)
+    None
 
 """
 

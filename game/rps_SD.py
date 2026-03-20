@@ -10,7 +10,6 @@ Outputs:
 
 
 import random
-from random import randint
 
 choiceWords = ['rock', 'paper', 'scissors']
 score = [0, 0]
@@ -18,7 +17,7 @@ win = ''
 
 
 def getDarkMove():
-    ran = randint(0, 2)
+    ran = random.randint(0, 2)
     print("It chose " + choiceWords[ran] + ".")
     return ran
 
@@ -59,12 +58,12 @@ def roundWinner(userRound, darkRound):
 def matchWinner(userMatch, darkMatch):
     global win
     if userMatch > darkMatch:
-        print("'LUCKY WINNER'\n")
-        print("The shroud of darkness dissipates from the front of the room. The door is now visible. An item lies in front of it.\n")
+        print("\n'LUCKY WINNER'")
+        print("\nThe shroud of darkness dissipates from the front of the room. The door is now visible.")
         win = True
     elif userMatch < darkMatch:
-        print("'LOSER'\n")
-        print("You feel a chill run down your spine as one of the darkness' hands points behind you. You turn around to look...\n")
+        print("\n'LOSER'")
+        print("\nYou feel a chill run down your spine as one of the darkness' hands points behind you. You turn around to look... You can no longer move.")
         win = False
 
 
