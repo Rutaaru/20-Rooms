@@ -6,7 +6,7 @@ Program Name:
 Program Description:
     "This program is for entertainment purposes.
     It is a game where the main mechanic is playing rock-paper-scissors against the computer.
-    The main function imports a few files to function.
+    The main file imports a few files to function.
     The main function sets up the user's health, inventory, and room number.
     The main function also dictates the loop of the game, and whether the game may continue or not."
 
