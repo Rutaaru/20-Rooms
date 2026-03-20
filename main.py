@@ -38,6 +38,8 @@ def main():
 
     beginning() # Introductory print text when you first start the program
     startGame = True # Begin the actual game
+    play_againCalled = False
+
 
     while startGame: # Loop the overall scope of the game
         health = int(100)  # Start/restart user health
@@ -45,7 +47,7 @@ def main():
         room = int(1) # Start/restart room number to "Room 1"
         gameLoop = True # Activate regular loop of the game
 
-        if play_again.called: # Dialogue for user retrying the game
+        if play_againCalled: # Dialogue for user retrying the game
             print("\nYou wake up on the floor of one of the rooms, again. The shady forearms immediately immerge from the front of the room's darkness.\n")
             print("\"ANOTHER GO, HUH?\"\n")
             print("You get up, and walk over to it before posing your hands and arms for another match.")
@@ -92,7 +94,7 @@ def main():
                         death_screen()
 
                         if play_again():
-                            play_again.called = True
+                            play_againCalled = True
                             gameLoop = False
 
                         else:
