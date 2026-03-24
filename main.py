@@ -86,7 +86,7 @@ def main():
                         print("An item lies in front of it.")
                         inventory, health = item_system(inventory, health)
                         print(f"\n'{room + 1}'")
-                        print(f"The door to room {room} closes behind you.")
+                        print(f"The door to Room {room} closes behind you.")
                         print("\nYou approach the front of this room's darkness, and ready your arms and hands.")
                         room = room + int(1)
                     elif room == 20:
