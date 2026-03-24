@@ -43,6 +43,8 @@ def choose_entity():
 
     chosenEntity = entityList[entityPick]
 
+    return chosenEntity
+
 def entity_events(inventory):
     global damage
     global itemList
@@ -441,6 +443,9 @@ def entity_events(inventory):
 
 def entity_system(inventory, health):
     global damage
+    global chosenEntity
+    damage = int(0)
+    chosenEntity = ''
 
     if will_it_hurt() == False:
         print("\n...But nothing happens.")
@@ -457,8 +462,10 @@ def entity_system(inventory, health):
         if willReturn == True:
             for i in range(2):
                 if health > 0:
+                    chosenEntity = ''
+
                     choose_entity()
-                    entity_events(inventory)
+                    inventory = entity_events(inventory)
                     health = health - damage
                     print(f"\nYour health is now at {health}/100.")
                     if i == 0:
@@ -488,7 +495,7 @@ def entity_system(inventory, health):
 
         elif willReturn == False:
             choose_entity()
-            entity_events(inventory)
+            inventory = entity_events(inventory)
             health = health - damage
             print(f"\nYour health is now at {health}/100.")
 

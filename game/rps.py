@@ -1,6 +1,6 @@
 """
-Inputs:
 
+Inputs:
     None
 
 Outputs:
@@ -68,7 +68,11 @@ def matchWinner(userMatch, darkMatch):
 
 
 def rps():
+    global choiceWords
     global win
+    global score
+    win = ''
+    score = [0, 0]
 
     while score[0] < 2 and score[1] < 2:
         userMove = getUserMove()

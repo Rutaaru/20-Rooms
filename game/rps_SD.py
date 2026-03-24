@@ -68,7 +68,11 @@ def matchWinner(userMatch, darkMatch):
 
 
 def rps_SD():
+    global choiceWords
     global win
+    global score
+    win = ''
+    score = [0, 0]
 
     while score[0] < 1 and score[1] < 1:
         userMove = getUserMove()

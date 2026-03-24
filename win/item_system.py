@@ -43,7 +43,7 @@ def defense_items(inventory):
 
     chosenDefenseItem = defenseItemList[defenseItemNumber]
 
-    if chosenHealthItem == 'meat':
+    if chosenDefenseItem == 'meat':
         print("\nThe item that appeared was a slab of meat.")
         print("Even with food presented in front of you, it's very apparent that you don't feel the need to eat.")
         print("\nYou touch the meat, and it enters your inventory.")
@@ -56,7 +56,7 @@ def defense_items(inventory):
         elif len(inventory) == 3:
             print(f"Your inventory is now: {inventory[0]}, {inventory[1]}, {inventory[2]}.")
 
-    elif chosenHealthItem == 'umbrella':
+    elif chosenDefenseItem == 'umbrella':
         print("\nThe item that appeared was an umbrella.")
         print("It seems as if no light is able to pass through the canopy's fabric.")
         print("\nYou touch the umbrella, and it enters your inventory.")
@@ -69,7 +69,7 @@ def defense_items(inventory):
         elif len(inventory) == 3:
             print(f"Your inventory is now: {inventory[0]}, {inventory[1]}, {inventory[2]}.")
 
-    elif chosenHealthItem == 'cheese':
+    elif chosenDefenseItem == 'cheese':
         print("\nThe item that appeared was a wedge of cheese.")
         print("It looks perfectly fresh and free of bacteria, somehow.")
         print("\nYou touch the cheese, and it enters your inventory.")
@@ -82,7 +82,7 @@ def defense_items(inventory):
         elif len(inventory) == 3:
             print(f"Your inventory is now: {inventory[0]}, {inventory[1]}, {inventory[2]}.")
 
-    elif chosenHealthItem == 'sunglasses':
+    elif chosenDefenseItem == 'sunglasses':
         print("\nThe item that appeared was a pair of sunglasses.")
         print("They are not stylish in teh slightest, and the lenses look extremely tinted.")
         print("\nYou touch the sunglasses, and they enter your inventory.")
@@ -95,7 +95,7 @@ def defense_items(inventory):
         elif len(inventory) == 3:
             print(f"Your inventory is now: {inventory[0]}, {inventory[1]}, {inventory[2]}.")
 
-    elif chosenHealthItem == 'antivenom':
+    elif chosenDefenseItem == 'antivenom':
         print("\nThe item that appeared was a syringe labelled 'ANTIVENOM'.")
         print("You are instantly unsettled by its presence.")
         print("\nYou touch the syringe, and it enters your inventory.")
@@ -108,7 +108,7 @@ def defense_items(inventory):
         elif len(inventory) == 3:
             print(f"Your inventory is now: {inventory[0]}, {inventory[1]}, {inventory[2]}.")
 
-    elif chosenHealthItem == 'earplugs':
+    elif chosenDefenseItem == 'earplugs':
         print("\nThe item that appeared was a pair of earplugs.")
         print("The tiny pieces, of what you assume is foam, present a simple, off-white color.")
         print("\nYou touch the earplugs, and they enter your inventory.")
@@ -121,7 +121,7 @@ def defense_items(inventory):
         elif len(inventory) == 3:
             print(f"Your inventory is now: {inventory[0]}, {inventory[1]}, {inventory[2]}.")
 
-    elif chosenHealthItem == 'teddy bear':
+    elif chosenDefenseItem == 'teddy bear':
         print("\nThe item that appeared was a teddy bear.")
         print("The brown animal holds a heart in front of it with its arms.")
         print("\nYou touch the teddy bear, and it enters your inventory.")
@@ -134,7 +134,7 @@ def defense_items(inventory):
         elif len(inventory) == 3:
             print(f"Your inventory is now: {inventory[0]}, {inventory[1]}, {inventory[2]}.")
 
-    elif chosenHealthItem == 'gas mask':
+    elif chosenDefenseItem == 'gas mask':
         print("\nThe item that appeared was a gas mask.")
         print("The assumed-fact that you may need to use this at some point is intimidating.")
         print("\nYou touch the gas mask, and it enters your inventory.")
@@ -147,7 +147,7 @@ def defense_items(inventory):
         elif len(inventory) == 3:
             print(f"Your inventory is now: {inventory[0]}, {inventory[1]}, {inventory[2]}.")
 
-    elif chosenHealthItem == 'mannequin head':
+    elif chosenDefenseItem == 'mannequin head':
         print("\nThe item that appeared was the head of a mannequin.")
         print("It's white and shiny. You wonder how it could be so pristine in a place like this.")
         print("\nYou touch the mannequin head, and it enters your inventory.")
@@ -262,8 +262,12 @@ def health_items(health):
 
 
 def item_system(inventory, health):
+    global recover
     global chosenDefenseItem
     global chosenHealthItem
+    recover = int(0)
+    chosenDefenseItem = ''
+    chosenHealthItem = ''
 
     print("\nApproaching the door to the next room, you observe the item in front of it...")
 
@@ -272,13 +276,13 @@ def item_system(inventory, health):
             print("\n'THE GUILT OF GREEDY POCKETS ISN'T NECESSARY'")
             print("\nYour inventory is full, so the item disappears.")
         else:
-            defense_items(inventory)
+            inventory = defense_items(inventory)
 
     else:
-        health_items(health)
+        health = health_items(health)
 
     print("\nYou place your hand on the knob of the door, and enter the next room.")
 
     return inventory, int(health)
 
-item_system(['meat', 'umbrella'], 80)
+item_system(['teddy bear', 'gas mask'], 70)

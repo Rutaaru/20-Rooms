@@ -14,7 +14,7 @@ Author:
     L. A.
 
 Code Update Date:
-    03/20/26
+    03/23/26
 
 """
 
@@ -33,6 +33,7 @@ from story.ending import ending
 
 from win.item_system import item_system
 
+match = ''
 
 def main():
 
@@ -43,8 +44,9 @@ def main():
 
     while startGame: # Loop the overall scope of the game
         health = int(100)  # Start/restart user health
-        inventory = ['']  # Start/restart user inventory
+        inventory = []  # Start/restart user inventory
         room = int(1) # Start/restart room number to "Room 1"
+        global match
         gameLoop = True # Activate regular loop of the game
 
         if play_againCalled: # Dialogue for user retrying the game
@@ -75,10 +77,11 @@ def main():
                     else:
                         match = 'lost'
 
+
                 if match == 'won':
                     if room < 20:
                         print("An item lies in front of it.")
-                        item_system(inventory, health)
+                        inventory, health = item_system(inventory, health)
                         print(f"\n'{room + 1}'")
                         print(f"The door to room {room} closes behind you.")
                         print("\nYou approach the front of this room's darkness, and ready your arms and hands.")
@@ -88,7 +91,7 @@ def main():
 
 
                 elif match == 'lost':
-                    entity_system(inventory, health)
+                    inventory, health = entity_system(inventory, health)
 
                     if health < 1:
                         death_screen()
@@ -99,6 +102,7 @@ def main():
 
                         else:
                             startGame = False
+
 
             else:
                 ending()
