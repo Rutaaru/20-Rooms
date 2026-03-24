@@ -12,7 +12,7 @@ Outputs:
 def play_again():
     resetChoice = input("\n(Would you like to reset from the beginning and try the game again? [y/n]:) ").lower()
 
-    while resetChoice != 'y' or resetChoice != 'yes' or resetChoice != 'n' or resetChoice != 'no':
+    while resetChoice != 'y' and resetChoice != 'yes' and resetChoice != 'n' and resetChoice != 'no':
         print("\n(Bad input.)")
         resetChoice = input("(To play the game again, try entering 'y'/'yes'/'Y'/'Yes'/'YES'. To end the game, try entering 'n'/'no'/'N'/'No'/'NO':) ").lower()
 
