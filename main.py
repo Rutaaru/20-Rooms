@@ -67,7 +67,7 @@ def main():
                 if room == 10 or room == 20: # Sudden-Death rooms
                     print("\n'SUDDEN DEATH'")
                     print("'1-OUT-OF-1 MATCH'\n")
-                    print("'BE READY'\n")
+                    print("'BE READY'")
 
                     if rps_SD():
                         match = 'won'
