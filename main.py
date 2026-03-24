@@ -46,7 +46,7 @@ def main():
     while startGame: # Loop the overall scope of the game
         health = int(100)  # Start/restart user health
         inventory = []  # Start/restart user inventory
-        room = int(1) # Start/restart room number to "Room 1"
+        room = int(20) # Start/restart room number to "Room 1"
         global match
 
         if play_againCalled: # Dialogue for user retrying the game
@@ -110,6 +110,7 @@ def main():
 
             else:
                 ending()
+                startGame = False
                 gameLoop = False
 
 
