@@ -63,7 +63,7 @@ def matchWinner(userMatch, darkMatch):
         win = True
     elif userMatch < darkMatch:
         print("\n'LOSER'")
-        print("You feel a chill run down your spine as one of the darkness' hands points behind you. You turn around to look... You can no longer move.")
+        print("\nYou feel a chill run down your spine as one of the darkness' hands points behind you. You turn around to look... You can no longer move.")
         win = False
 
 
