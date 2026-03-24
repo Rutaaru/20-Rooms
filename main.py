@@ -19,8 +19,6 @@ Code Update Date:
 """
 
 
-import random
-
 from game.play_again import play_again
 from game.rps import rps
 from game.rps_SD import rps_SD
