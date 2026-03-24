@@ -15,4 +15,4 @@ def death_screen():
     print("\nLife tries flashing before your eyes.")
     print("But you can't remember your life.")
     print("All that flashes are your experiences within the rooms which confine you.")
-    print("\n[GAME OVER]")
+    print("\n\n[YOU DIED]")

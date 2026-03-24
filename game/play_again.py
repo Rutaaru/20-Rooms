@@ -26,4 +26,5 @@ def play_again():
         print("\n(You have given up.)")
         print("\n(Your body remains lifeless.)")
         print("(Your spirit amounts to nothing.)")
+        print("\n\n[GAME OVER]")
         return False

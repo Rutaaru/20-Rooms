@@ -20,6 +20,6 @@ def ending():
     print("\n*BLAM*")
     print("\nYou fall onto the floor. Your body begins phasing through it.")
     print("\n...You no longer feel pain, worry, or fear, and you feel warm inside. A serene sense of contentness envelopes every fiber of your being.")
-    print("\"...\"")
+    print("\n\"...\"")
     print("\"In the name of the everlasting dark and the diligent light... find peace.\"")
-    print("\n\n[YOU WIN]")
+    print("\n\n[GAME WON]")
