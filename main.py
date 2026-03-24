@@ -32,20 +32,22 @@ from story.ending import ending
 from win.item_system import item_system
 
 match = ''
+startGame = True # Begin the actual game
+gameLoop = True # Activate regular loop of the game
 
 def main():
-
-    beginning() # Introductory print text when you first start the program
-    startGame = True # Begin the actual game
     play_againCalled = False
 
+    beginning()  # Introductory print text when you first start the program
+
+    global startGame
+    startGame = True
 
     while startGame: # Loop the overall scope of the game
         health = int(100)  # Start/restart user health
         inventory = []  # Start/restart user inventory
         room = int(1) # Start/restart room number to "Room 1"
         global match
-        gameLoop = True # Activate regular loop of the game
 
         if play_againCalled: # Dialogue for user retrying the game
             print("\nYou wake up on the floor of one of the rooms, again. The shady forearms immediately immerge from the front of the room's darkness.\n")
@@ -53,7 +55,10 @@ def main():
             print("You get up, and walk over to it before posing your hands and arms for another match.")
             print("It follows suit.\n")
             print("\"LET'S SEE IF YOU CAN GET LUCKY ENOUGH, THIS TIME.\"\n")
-            print("A bright-red '1' appears in your mind's eye, once more.\n")
+            print("A bright-red '1' appears in your mind's eye, once more.")
+
+        global gameLoop
+        gameLoop = True
 
         while gameLoop: # Loop the main game
             match = ''
@@ -100,13 +105,12 @@ def main():
 
                         else:
                             startGame = False
+                            gameLoop = False
 
 
             else:
                 ending()
                 gameLoop = False
-
-        startGame = False
 
 
 if __name__ == "__main__":

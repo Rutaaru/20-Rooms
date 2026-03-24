@@ -284,5 +284,3 @@ def item_system(inventory, health):
     print("\nYou place your hand on the knob of the door, and enter the next room.")
 
     return inventory, int(health)
-
-item_system(['teddy bear', 'gas mask'], 70)

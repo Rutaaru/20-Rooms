@@ -22,7 +22,7 @@ def getDarkMove():
     return ran
 
 def getUserMove():
-    enter = input("Rock, paper, scissors...: ")
+    enter = input("\nRock, paper, scissors...: ")
     invalid = True
     while invalid:
         if enter == 'R' or enter == 'r' or enter == 'Rock' or enter == 'rock':
@@ -78,7 +78,7 @@ def rps():
         userMove = getUserMove()
         darkMove = getDarkMove()
         roundWinner(userMove, darkMove)
-        print(f"\nYou - {score[0]}; It - {score[1]}\n")
+        print(f"\nYou - {score[0]}; It - {score[1]}")
 
     if score[0] == 2 or score[1] == 2:
         matchWinner(score[0], score[1])
