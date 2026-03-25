@@ -48,8 +48,8 @@ This program was made using Python, with PyCharm.
 
 ### Videos
 
-- [Code Demo](https://www.youtube.com/watch?v=...)
-- [Code Walkthrough](https://www.youtube.com/watch?v=...)
+- [Code Demo](https://www.youtube.com/watch?v=Ga2Qziqx8q8)
+- [Code Walkthrough](https://www.youtube.com/watch?v=Y4BBolgYYoM)
 
 ---
 
